@@ -45,7 +45,7 @@ class PoolLayer:
 
         return pooled_output
 
-    def backward_pass(self, d_out):
+    def backward_pass(self, d_out, learn_rate):
         input_data = self.last_input
         d_input = np.zeros_like(input_data, dtype=float)
 

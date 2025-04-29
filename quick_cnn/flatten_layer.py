@@ -8,5 +8,5 @@ class FlattenLayer:
         self.input_shape = input_data.shape
         return input_data.reshape(-1)
 
-    def backward_pass(self, d_out):
+    def backward_pass(self, d_out, learn_rate):
         return d_out.reshape(self.input_shape)
